@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      name: configclient #与远程仓库中配置文件名一致
+      label: master
+      discovery:
+        enabled: true
+        service-id: configserver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
